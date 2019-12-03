@@ -7,7 +7,7 @@
 <%= paginate @exhibitions %>
 <br>
 
-<%= link_to 'New Exhibition', new_exhibition_path %>
+
 <div class="container my-4">
       <div class="carousel-inner" role="listbox">
 <% @exhibitions.each do |exhibition| %>
@@ -34,6 +34,7 @@
         <% if current_user.admin? %>
         <td><%= link_to 'Edit', edit_exhibition_path(exhibition) %></td>
         <td><%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'New Exhibition', new_exhibition_path %>
         <% end %>
         <% end %> 
               </div>

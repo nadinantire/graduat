@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'comments/create'
   get 'galleries/gallery'
-  root "categories#index"
+  root "exhibitions#index"
   resources :visits
   resources :tickets
   resources :transactions
