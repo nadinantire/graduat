@@ -27,9 +27,7 @@
   <strong>End Time:</strong>
   <%= @exhibition.end_time %>
 </p>
-<% if signed_in? %>
 <p>List of Comments(Contents below are important)</p>
 <%= render 'comments/comment' %>
-<% end %>
 <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
 <%= link_to 'Back', exhibitions_path %>
