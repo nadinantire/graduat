@@ -1,5 +1,6 @@
 class Exhibition < ApplicationRecord
-    has_many :tickets
+    has_many :tickets, dependent: :destroy
+    has_many :comments, dependent: :destroy
     mount_uploader :image, ImageUploader
     validates :title, presence: true
     def validate(record)

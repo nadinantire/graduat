@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'comments/create'
   get 'galleries/gallery'
   root "categories#index"
   resources :visits
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :exhibitions do
     resources :tickets
+    resources :comments
   end
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   #root to: 'users/sign_in'

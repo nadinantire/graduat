@@ -2,7 +2,7 @@
 
 <p>
   <strong>image:</strong>
-  <%= image_tag @exhibition.image.url %>
+  <%= image_tag @exhibition.image.url, class: "", size: "200x200" unless @exhibition.image.url.blank? %>
 </p>
 
 <p>
@@ -27,7 +27,9 @@
   <strong>End Time:</strong>
   <%= @exhibition.end_time %>
 </p>
-
-
+<% if signed_in? %>
+<p>List of Comments(Contents below are important)</p>
+<%= render 'comments/comment' %>
+<% end %>
 <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
 <%= link_to 'Back', exhibitions_path %>

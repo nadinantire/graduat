@@ -27,16 +27,18 @@
                   <a class="btn btn-primary">Button</a>
                   <p class="card-text"><h4><%= exhibition.discription %></h4>
                   <%=link_to "ATTEND EVENT", new_exhibition_ticket_path(exhibition)%>
-                </div>
-                <% if user_signed_in? %>
-        <% if current_user.admin? %>
-        <td><%= link_to 'Show', exhibition %></td>
+                  <td><%= link_to 'Show', exhibition %></td>
         <td><%= link_to 'Edit', edit_exhibition_path(exhibition) %></td>
         <td><%= link_to 'Destroy', exhibition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-        <% end %> 
+                </div>
+        #         <% if user_signed_in? %>
+        # <% if current_user.admin? %>
+        
+        # <% end %>
+        # <% end %> 
               </div>
             </div>
+            
  <% end %>            
 
         </div>

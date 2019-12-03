@@ -6,6 +6,7 @@ class ExhibitionsController < ApplicationController
   end
 
   def show
+    @comments = Comment.where(exhibition_id: @exhibition)
   end
 
   def new
