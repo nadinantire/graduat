@@ -29,5 +29,9 @@
 </p>
 <p>List of Comments(Contents below are important)</p>
 <%= render 'comments/comment' %>
+<% if user_signed_in? %>
+  <% if current_user.admin? %>
 <%= link_to 'Edit', edit_exhibition_path(@exhibition) %> |
 <%= link_to 'Back', exhibitions_path %>
+<% end %>
+<% end %>

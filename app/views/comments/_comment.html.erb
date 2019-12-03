@@ -3,8 +3,12 @@
     <% if comment.id.present? %>
       <li>
         <p><br><%= comment.content %><br>
+        <% if user_signed_in? %>
+            <% if current_user.admin? %>
         <%= link_to "delete", [comment.exhibition, comment], method: :delete, class:"genric-btn danger-border circle" %>
         <%= link_to "edit ", edit_exhibition_comment_path(comment.exhibition, comment), class:"genric-btn success-border circle" %></p>
+        <% end %>
+        <% end %>
         </li>
     <% end %>
   <% end %>
