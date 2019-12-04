@@ -1,4 +1,4 @@
-User.create!(email: 'admina@gmail.com',password: '123456', admin:'true')
+User.create!(email: 'adminaa@gmail.com',password: '123456', admin:'true')
 # def create_learner(email)
 #     User.create!(
 #       email:  email,

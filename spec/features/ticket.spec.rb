@@ -10,7 +10,7 @@ RSpec.feature "Ticket management function", type: :feature do
     scenario "Test exhibition list" do
       @ex=Exhibition.create!(title: 'test_exhibition_01')
     
-       @ticket= Ticket.create!(phone: 'test_exhibition_01',user_id:@user.id, exhibition_id:@ex.id)
+       @ticket= Ticket.create!(phone: '1234567890',user_id:@user.id, exhibition_id:@ex.id)
         
 assert @ticket
     
@@ -26,7 +26,7 @@ assert @ticket
   scenario "validation" do
     @ex=Exhibition.create!(title: 'test_exhibition_01')
     
-    @ticket= Ticket.create!(phone: 'test_exhibition_01',user_id:@user.id, exhibition_id:@ex.id)
+    @ticket= Ticket.create!(phone: '1234567890',user_id:@user.id, exhibition_id:@ex.id)
     expect(@ticket).to be_valid
       end
 

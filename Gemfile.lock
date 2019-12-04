@@ -1,4 +1,16 @@
 GIT
+  remote: https://github.com/activerecord-hackery/ransack.git
+  revision: a4540e3e77f6088c5baf46b4ae49489a4cfd4ffe
+  specs:
+    polyamorous (2.3.0)
+      activerecord (>= 5.2.1)
+    ransack (2.3.0)
+      activerecord (>= 5.2.1)
+      activesupport (>= 5.2.1)
+      i18n
+      polyamorous (= 2.3.0)
+
+GIT
   remote: https://github.com/lardawge/carrierwave_backgrounder.git
   revision: 460394b0e2c0cf0c192be9c1a60bcf9dfb1f9e4d
   specs:
@@ -326,6 +338,7 @@ DEPENDENCIES
   rails (~> 5.2.3)
   rails_admin (~> 2.0)
   rails_admin-i18n
+  ransack!
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver

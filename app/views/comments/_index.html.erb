@@ -1,9 +1,9 @@
-<ul>
+<div class="card-body">
   <% @comments.each do |comment| %>
     <% if comment.id.present? %>
-      <li>
-        <p><%= comment.content %></p>
-      </li>
+      
+      <h4 class="card-title"><%= comment.content %></h4>
+      
     <% end %>
   <% end %>
-</ul>
+  </div>
